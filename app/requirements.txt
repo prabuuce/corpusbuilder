@@ -1,7 +1,15 @@
-Flask
-Flask-CouchDB
-Flask-Celery
-Redis
-Requests
-Boilerpipe
-	
+#Flask
+#Flask-CouchDB
+#Flask-Celery
+#Redis
+#Requests
+#Boilerpipe
+
+first time
+git commit -m "commit message"
+git remote add origin https://github.com/svattam/corpusbuilder.git
+git push -u origin master
+
+subsequently
+git commit -m "commit message"
+git push -u origin master
