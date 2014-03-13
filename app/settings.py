@@ -22,9 +22,12 @@ CELERY_QUEUES = {"retrieve": {"exchange": "default", "exchange_type": "direct", 
 class MyRouter(object):
 
     def route_for_task(self, task, args=None, kwargs=None):
-        if task == "crawler.tasks.retrieve_page":
+        if task == "app.tasks.retrieve_page":
             return { "queue": "retrieve" }
         else:
             return { "queue": "process" }
 
 CELERY_ROUTES = (MyRouter(), )
+
+MAX_CORPUS_SIZE = 500
+SEED_URL = "http://techcrunch.com/startups/"

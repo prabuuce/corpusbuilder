@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class=crawl>
+  <h2>Crawl</h2>
+    <a href="{{ url_for('initiate_crawl') }}">Initiate</a>
+    <a href="{{ url_for('pause_crawl') }}">Pause</a>
+    <a href="{{ url_for('resume_crawl') }}">Resume</a>
+    <a href="{{ url_for('shutdown_crawl') }}">Shutdown</a>
+  </div>
+  <div class=boiperpipe>
+  <h2>Boilerpipe extraction</h2>
+    <a href="{{ url_for('start_bp_extract') }}">Extract</a>
+  </div>
+  <div class=justext>
+  <h2>jusText extraction</h2>
+    <a href="{{ url_for('start_jt_extract') }}">Extract</a>
+  </div>
+{% endblock %}

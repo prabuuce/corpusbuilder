@@ -37,18 +37,8 @@ celery = make_celery()
 from app.page import models as page_models
 from app.extraction import models as extraction_models
 from app.extraction import boilerpipe_wrapper
+import views
 
-@app.route('/')
-def welcome():
-    return "Welcome to Corpusbuilder2"
-
-import tasks
-from tasks import retrieve_page, retrieve_extraction
-@app.route('/start')
-def start():
-    url = "http://www.gatech.edu"
-    retrieve_page.delay(url)
-    return "crawling on: "+url
 
 
 

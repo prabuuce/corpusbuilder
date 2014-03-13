@@ -65,6 +65,9 @@ class Page(Document):
             all_pages.append(Page.load(row.id))
         return all_pages
     
+    @staticmethod # returns total number of pages
+    def get_total_num_of_pages():
+        return len(Page.all_pages())
     
     @staticmethod # returns a Page object
     def get_page_by_url(url):
